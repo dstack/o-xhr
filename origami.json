@@ -1,0 +1,14 @@
+{
+    "description": "This component will provide a lightweight, cross-browser abstraction for making XHR requests.",
+    "origamiType": "module",
+    "origamiVersion": 1,
+    "support": "ssh://git@devops-tools.pearson.com/~vmoliju/o-he-xhr.git/issues",
+    "supportStatus": "experimental",
+    "demos": [
+        {
+            "path": "/demos/demo.html",
+            "expanded": true,
+            "description": ""
+        }
+    ]
+}
