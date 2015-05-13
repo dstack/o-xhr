@@ -1,18 +1,52 @@
 # o-he-xhr
 
-### Deploying for the first time
+## Description
 
-1. Create a new repository (tipically: on GitHub)
-2. Delete the existing Git directory: `rm -Rf .git`
-3. Initialise a new local Git repository: `git init .`
-4. Add the remote repository:
+This component provides a lightweight, cross-browser abstraction for making XHR requests
 
-  ```
-  git remote add origin ssh://git@devops-tools.pearson.com/~vmoliju/o-he-xhr.git
-  ```
-5. Test and verify: `obt test && obt verify` (and fix the code raising errors)
-6. Commit and push: `git add . && git commit -m "Initial commit" && git push origin master`
+### Example
+
+```
+var request = require('o-he-xhr');
+
+request.xhr({
+  url: 'http://reqr.es/api/users',
+  onError: function (res) {
+    formatResponse(res);
+  },
+  onComplete: function (res){
+    formatResponse(res);
+  }
+});
+```
+
+
+The xhr function accepts a settings object as its only argument.  The settings object can contain the following options.
+
+### url - Required
+
+This should be a string to represent the path to the resource
+
+### method - Optional
+
+A string containing the HTTP verb you are using.  Please note that there is no validation on this field, so you should use care to make sure you are using valid methods.
+
+### onComplete - Optional
+
+A callback function to be executed on successful completion of the request.
+
+### onError - Optional
+
+A callback function to be executed if the request returns an error.
+
+### data - Optional
+
+A string representing the body of the request.
+
+## Browser Support
+
+This component has been tested in IE, Firefox, and Chrome.
 
 ## License
 
-This software is published by Pearson Higher Education under the [MIT licence](http://opensource.org/licenses/MIT).
+This software is published by Pearson Higher Education under the [MIT license](http://opensource.org/licenses/MIT).

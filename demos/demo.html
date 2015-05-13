@@ -13,6 +13,23 @@
 	<link rel="stylesheet" href="/bundles/css?modules=o-he-xhr:/demos/src/demo.scss" />
 </head>
 <body class="o-hoverable-on">
+<div>
+  <h1>XHR Demo</h1>
+  <button class="request">GET</button>
+  <button class="request">POST</button>
+  <button class="request">PUT</button>
+  <button class="request">DELETE</button>
+  <button class="clear">CLEAR RESULTS</button>
+  <br /><br />
+  <label ref="url">URL</label>
+  <input id="url" value="http://reqr.es/api/users"></input>
+  <br /><br />
+  <label ref="data">Data</label>
+  <textarea id="data"></textarea>
+  <br /><br />
+  <span>Results</span>
+  <div id="results"><div>
+<div>
 
 <script src="/bundles/js?modules=o-he-xhr:/demos/src/demo.js"></script>
 <script src="//registry.origami.ft.com/embedapi?autoload=resize"></script>

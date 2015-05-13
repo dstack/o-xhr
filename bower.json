@@ -2,7 +2,6 @@
   "name": "o-he-xhr",
   "dependencies": {},
   "main": [
-    "main.scss",
     "main.js"
   ],
   "ignore": [

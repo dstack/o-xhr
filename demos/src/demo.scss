@@ -1,4 +1,20 @@
 $o-assets-global-path: '/bower_components/';
 $o-he-xhr-is-silent: false;
 
-@import '../../main';
+#results {
+  min-height: 100px;
+  width: 800px;
+  border: 1px solid #000
+}
+
+input, textarea {
+  width: 750px;
+}
+
+textarea {
+  height: 100px;
+}
+
+label {
+  vertical-align: top;
+}

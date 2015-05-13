@@ -2,7 +2,7 @@
     "description": "This component will provide a lightweight, cross-browser abstraction for making XHR requests.",
     "origamiType": "module",
     "origamiVersion": 1,
-    "support": "ssh://git@devops-tools.pearson.com/~vmoliju/o-he-xhr.git/issues",
+    "support": "https://github.com/jumolis/o-he-xhr/issues",
     "supportStatus": "experimental",
     "demos": [
         {

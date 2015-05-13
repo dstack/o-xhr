@@ -2,5 +2,5 @@
 'use strict';
 
 module.exports = {
-	foo: require('./src/js/foo')
+	xhr: require('./src/js/xhr')
 };
