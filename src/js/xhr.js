@@ -27,4 +27,5 @@ module.exports = function (settings) {
     }
   };
   r.send(settings.data);
+  return r;
 };

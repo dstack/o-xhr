@@ -22,7 +22,7 @@ describe('The o-he-xhr module', function () {
     this.server.respondWith('FOO', route, [200,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res) {
@@ -32,6 +32,7 @@ describe('The o-he-xhr module', function () {
         expect(JSON.parse(res)).to.be.a(Object);
         done();
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 
@@ -39,7 +40,7 @@ describe('The o-he-xhr module', function () {
     this.server.respondWith('FOO', route, [201,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res) {
@@ -49,6 +50,7 @@ describe('The o-he-xhr module', function () {
         expect(JSON.parse(res)).to.be.a(Object);
         done();
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 
@@ -56,7 +58,7 @@ describe('The o-he-xhr module', function () {
     this.server.respondWith('FOO', route, [202,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res) {
@@ -66,6 +68,7 @@ describe('The o-he-xhr module', function () {
         expect(JSON.parse(res)).to.be.a(Object);
         done();
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 
@@ -73,7 +76,7 @@ describe('The o-he-xhr module', function () {
     this.server.respondWith('FOO', route, [204,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res) {
@@ -83,14 +86,15 @@ describe('The o-he-xhr module', function () {
         expect(JSON.parse(res)).to.be.a(Object);
         done();
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 
-  it('should execute onError function on a failed request with a server error', function (done) {
+  it('should execute onError function on a failed request with a client error', function (done) {
     this.server.respondWith('FOO', route, [400,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res){
@@ -100,6 +104,7 @@ describe('The o-he-xhr module', function () {
       onComplete: function (res){
         done(expect().fail('Called success when it should have failed'));
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 
@@ -107,7 +112,7 @@ describe('The o-he-xhr module', function () {
     this.server.respondWith('FOO', route, [500,
       { 'Content-Type': headerValue }, body ]);
 
-    new xhr({
+    var req = xhr({
       url: route,
       method: 'FOO',
       onError: function (res){
@@ -117,6 +122,7 @@ describe('The o-he-xhr module', function () {
       onComplete: function (res){
         done(expect().fail('Called success when it should have failed'));
       }});
+    expect(req).to.be.an(XMLHttpRequest);
     this.server.respond();
   });
 });

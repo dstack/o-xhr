@@ -1,5 +1,5 @@
 /*global require*/
-var request =  require('../../main');
+var xhr =  require('../../main');
 
 document.addEventListener("DOMContentLoaded", function() {
 	"use strict";
@@ -20,7 +20,7 @@ for(var i=0; i<buttons.length; i++) {
 }
 
 function makeCall (method) {
-  request.xhr({
+  xhr({
     url: document.getElementById('url').value,
     method: method,
     data: document.getElementById('data').value,
