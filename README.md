@@ -18,6 +18,7 @@ xhr({
     formatResponse(res);
   }
 });
+
 ```
 
 
