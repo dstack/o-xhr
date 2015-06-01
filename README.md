@@ -1,4 +1,4 @@
-# o-he-xhr
+# o-he-xhr [![Build Status](https://travis-ci.org/jumolis/o-he-xhr.svg)](https://travis-ci.org/jumolis/o-he-xhr)
 
 ## Description
 
