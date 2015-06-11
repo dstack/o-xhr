@@ -7,7 +7,7 @@ This component provides a lightweight, cross-browser abstraction for making XHR 
 ### Example
 
 ```
-var xhr = require('o-he-xhr');
+var xhr = require('o-xhr');
 
 xhr({
   url: 'http://reqr.es/api/users',
