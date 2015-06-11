@@ -2,3 +2,4 @@ node_modules*
 build*
 doc*
 demos/local*
+.sass-cache*
