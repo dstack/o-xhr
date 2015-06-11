@@ -1,9 +1,0 @@
-{
-  "generator-origami": {
-    "componentName": "o-he-xhr",
-    "componentDesc": "This component will provide a lightweight, cross-browser abstraction for making XHR requests.",
-    "gitRepo": "https://github.com/jumolis/o-he-xhr",
-    "organization": "Pearson Higher Education",
-    "camelCasedName": "oHeXhr"
-  }
-}
