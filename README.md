@@ -1,4 +1,4 @@
-# o-xhr [![Build Status](https://travis-ci.org/jumolis/o-xhr.svg)](https://travis-ci.org/jumolis/o-xhr)
+# o-xhr [![Build Status](https://travis-ci.org/Pearson-Higher-Ed/o-xhr.svg)](https://travis-ci.org/Pearson-Higher-Ed/o-xhr)
 
 ## Description
 
