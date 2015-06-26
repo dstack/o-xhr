@@ -1,6 +1,8 @@
 /*global module*/
 'use strict';
 
+var istanbul = require('browserify-istanbul');
+
 module.exports = function(config) {
 	config.set({
 
@@ -30,7 +32,7 @@ module.exports = function(config) {
 		// available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
 		preprocessors: {
 			'test/*.test.js': ['browserify'],
-			'src/js/*.js': ['coverage']
+
 		},
 
 
@@ -40,10 +42,10 @@ module.exports = function(config) {
 		reporters: ['progress', 'coverage'],
 
 		coverageReporter: {
-			type : 'lcovonly',
-			dir : 'coverage/',
-			subdir: '.',
-			file: 'coverage.lcov'
+			dir : 'build/reports/coverage',
+			reporters: [
+				{type: 'lcovonly', subdir: '.', file:'coverage.lcov'}
+			]
 		},
 
 
@@ -75,7 +77,9 @@ module.exports = function(config) {
 
 		browserify: {
 			debug: true,
-			transform: [ 'debowerify' ]
+			transform: [ 'debowerify', istanbul({
+				ignore: ['node_modules/**', 'test/**']
+			})]
 		}
 
 	});
